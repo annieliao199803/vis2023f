@@ -9,7 +9,7 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
 
 <head>
     <meta charset="utf-8">
-    <script src="./d3.v7.min.js"></script>
+    <script src="./d3.v3.min.js"></script>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap'); */
 
@@ -217,11 +217,11 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
                 if ( i == 4 && d != 'GitHub 帳號' ) {
                     return '<a href="https://' + d + '.github.io/vis2023f/" target="_blank"><img src="https://' + d + '.github.io/vis2023f/hw00/me.jpg"></a>' + '<hr><a href="https://github.com/' + d + '/vis2023f/" target="_blank">' + d + '</a>';
                 }
-                else if ( i == 0 || isNaN(d)) {
+                else if ( i == 0 || i == 2 || isNaN(d)) {
                     return d;
                 }
             })
-            .filter(function (d, i) { return (i >= 2 && !isNaN(d) && d != ""); })
+            .filter(function (d, i) { return (i > 2 && !isNaN(d) && d != ""); })
             .attr("class", function (d, i) { 
                 if (d == 10) return "excellent-kid"; 
                 else if (d >= 7 ) return "good-kid"; 
