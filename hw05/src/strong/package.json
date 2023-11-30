@@ -1,0 +1,14 @@
+{
+  "name": "6714073102b980dd",
+  "main": "6714073102b980dd@166.js",
+  "version": "166.0.0",
+  "homepage": "https://observablehq.com/d/6714073102b980dd",
+  "author": {
+    "name": "北科大-廖若安's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-liao-ruo-an-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
