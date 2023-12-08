@@ -1,7 +1,7 @@
 import define1 from "./e93997d5089d7165@2303.js";
 
 function _1(md){return(
-md`# HW03 Medium baseline (4pt)`
+md`# HW03 Strong baseline (4pt)`
 )}
 
 function _data(FileAttachment){return(
@@ -65,9 +65,16 @@ function _taiwanMap(d3,topojson,tw,DOM,bgColor,strokeColor,strokeOpacity,minidat
     .attr("d", path);
 
   const maxValue = 42;
-  const thresholds = d3.range(0, maxValue + 1);
-  const colorRange = thresholds.map(value => d3.interpolateReds(value / maxValue));
+  const thresholds = d3.range(0, maxValue + 20);
+  const colorRange = thresholds.map(value => d3.interpolateGreens(value / maxValue));
+  // const colorRange = d3.schemePastel2;
   const thresholdScale = d3.scaleThreshold().domain(thresholds).range(colorRange);
+
+  
+  // const maxValue = 42;
+  // const thresholds = d3.range(0, maxValue + 1);
+  // const colorRange = thresholds.map(value => d3.interpolateReds(value / maxValue));
+  // const thresholdScale = d3.scaleThreshold().domain(thresholds).range(colorRange);
   
   details
     .enter()
